@@ -9,8 +9,8 @@ interface IServer {
 
 class Server implements IServer {
 
-    protected port: number;
-    protected address: string;
+    public port: number;
+    public address: string;
 
     constructor(port: number, address: string){
         this.port = port;
@@ -24,5 +24,5 @@ class Server implements IServer {
     stopServer(): void {};
 }
 
-const someServer =  new Server(8080, 'localhost');
+const someServer: IServer =  new Server(8080, 'localhost');
 someServer.startServer();
