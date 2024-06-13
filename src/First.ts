@@ -33,6 +33,12 @@ function generateEmail(input: Person, force?: boolean): string | undefined{
     return `${input.firstName}.${input.lastName}@email.com`;
 }
 
+const abc: string | undefined = generateEmail({} as any);
+
+function toUpperCase(arg: string){};
+
+toUpperCase(abc!);
+
 console.log(generateEmail({
     firstName: 'John',
     lastName: 'Doe',
